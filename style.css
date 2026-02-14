@@ -62,13 +62,32 @@ body {background:var(--color-bg-light);color:var(--color-dark);}
 }
 .team h2 {margin-bottom:40px;}
 .team-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:30px;
-  max-width:1000px;
-  margin:0 auto;
-  align-items:stretch; /* Всі карточки одного ряду однакової висоти */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  max-width: 1400px; 
+  margin: 0 auto;
+  align-items: stretch;
 }
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .member {
   background:var(--color-mid);
   border-radius:14px;
@@ -162,3 +181,4 @@ body {background:var(--color-bg-light);color:var(--color-dark);}
 @media (max-width:768px){
   .project-title h1{font-size:24px;}
 }
+
